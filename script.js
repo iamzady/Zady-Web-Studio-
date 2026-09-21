@@ -1,22 +1,37 @@
-/* =========================================
-   ZADY WEB STUDIO
-   COMPLETE JAVASCRIPT
-========================================= */
+// ================================
+// ZADY WEB STUDIO - SCRIPT
+// ================================
 
 
-/* =========================================
-   MOBILE MENU
-========================================= */
-
+// MOBILE MENU
 const menuButton = document.getElementById("menuButton");
 const navLinks = document.getElementById("navLinks");
 
 if (menuButton && navLinks) {
 
-    menuButton.addEventListener("click", () => {
+    menuButton.addEventListener("click", function () {
 
-        navLinks.class
-  kks           navLinks.classList.remove("open");
+        navLinks.classList.toggle("open");
+
+        if (navLinks.classList.contains("open")) {
+            menuButton.textContent = "✕";
+            menuButton.setAttribute("aria-label", "Close menu");
+        } else {
+            menuButton.textContent = "☰";
+            menuButton.setAttribute("aria-label", "Open menu");
+        }
+
+    });
+
+
+    // Close menu when a link is clicked
+    const links = navLinks.querySelectorAll("a");
+
+    links.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            navLinks.classList.remove("open");
 
             menuButton.textContent = "☰";
 
@@ -32,204 +47,103 @@ if (menuButton && navLinks) {
 }
 
 
-/* =========================================
-   CONTACT FORM
-========================================= */
-
-const contactForm =
-    document.getElementById("contactForm");
-
-const formMessage =
-    document.getElementById("formMessage");
-
+// CONTACT FORM
+const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
 
 if (contactForm) {
 
-    contactForm.addEventListener(
-        "submit",
-        function (event) {
+    contactForm.addEventListener("submit", function (event) {
 
-            event.preventDefault();
+        event.preventDefault();
 
+        const name =
+            document.getElementById("name").value.trim();
 
-            const name =
-                document.getElementById("name").value.trim();
+        const phone =
+            document.getElementById("phone").value.trim();
 
-            const phone =
-                document.getElementById("phone").value.trim();
+        const email =
+            document.getElementById("email").value.trim();
 
-            const email =
-                document.getElementById("email").value.trim();
+        const service =
+            document.getElementById("service").value;
 
-            const service =
-                document.getElementById("service").value;
+        const message =
+            document.getElementById("message").value.trim();
 
-            const message =
-                document.getElementById("message").value.trim();
-
-
-            if (
-                !name ||
-                !phone ||
-                !email ||
-                !service ||
-                !message
-            ) {
-
-                formMessage.textContent =
-                    "Please fill in all the fields.";
-
-                return;
-
-            }
-
-
-            formMessage.textContent =
-                "Thank you! Your project request has been received.";
-
-
-            contactForm.reset();
-
-        }
-    );
-
-}
-
-
-/* =========================================
-   NAVBAR SCROLL EFFECT
-========================================= */
-
-const header =
-    document.querySelector(".header");
-
-
-window.addEventListener(
-    "scroll",
-    function () {
-
-        if (!header) return;
-
-
-        if (window.scrollY > 30) {
-
-            header.style.boxShadow =
-                "0 10px 35px rgba(0,0,0,0.25)";
-
-        } else {
-
-            header.style.boxShadow =
-                "none";
-
-        }
-
-    }
-);
-
-
-/* =========================================
-   CLOSE MOBILE MENU ON RESIZE
-========================================= */
-
-window.addEventListener(
-    "resize",
-    function () {
 
         if (
-            window.innerWidth > 850 &&
-            navLinks
+            name === "" ||
+            phone === "" ||
+            email === "" ||
+            service === "" ||
+            message === ""
         ) {
 
-            navLinks.classList.remove("open");
+            formMessage.textContent =
+                "Please fill in all the fields.";
 
-            if (menuButton) {
-
-                menuButton.textContent = "☰";
-
-                menuButton.setAttribute(
-                    "aria-label",
-                    "Open menu"
-                );
-
-            }
-
+            return;
         }
 
-    }
-);
 
+        formMessage.textContent =
+            "Thank you! Your request has been received.";
 
-/* =========================================
-   CURRENT YEAR
-========================================= */
-
-const footerText =
-    document.querySelector(".footer-bottom p");
-
-
-if (footerText) {
-
-    const currentYear =
-        new Date().getFullYear();
-
-    footerText.textContent =
-        `© ${currentYear} ZADY Web Studio. All rights reserved.`;
-
-}
-
-
-/* =========================================
-   SIMPLE SCROLL REVEAL
-========================================= */
-
-const revealElements =
-    document.querySelectorAll(
-        ".service-card, .portfolio-card, .price-card, .why-item, .process-step"
-    );
-
-
-if ("IntersectionObserver" in window) {
-
-    const observer =
-        new IntersectionObserver(
-            (entries) => {
-
-                entries.forEach((entry) => {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add(
-                            "show"
-                        );
-
-                        observer.unobserve(
-                            entry.target
-                        );
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.12
-            }
-        );
-
-
-    revealElements.forEach((element) => {
-
-        observer.observe(element);
+        contactForm.reset();
 
     });
 
 }
 
 
-/* =========================================
-   DONE
-========================================= */
+// NAVBAR SHADOW
+const header = document.querySelector(".header");
 
-console.log(
-    "ZADY Web Studio website loaded successfully."
-);
+window.addEventListener("scroll", function () {
+
+    if (!header) return;
+
+    if (window.scrollY > 30) {
+
+        header.style.boxShadow =
+            "0 10px 35px rgba(0,0,0,0.25)";
+
+    } else {
+
+        header.style.boxShadow = "none";
+
+    }
+
+});
+
+
+// RESET MOBILE MENU ON DESKTOP
+window.addEventListener("resize", function () {
+
+    if (window.innerWidth > 850) {
+
+        navLinks.classList.remove("open");
+
+        menuButton.textContent = "☰";
+
+    }
+
+});
+
+
+// CURRENT YEAR
+const footerText =
+    document.querySelector(".footer-bottom p");
+
+if (footerText) {
+
+    footerText.textContent =
+        `© ${new Date().getFullYear()} ZADY Web Studio. All rights reserved.`;
+
+}
+
+
+// WEBSITE LOADED
+console.log("ZADY Web Studio loaded successfully.");
