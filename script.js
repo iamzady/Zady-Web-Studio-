@@ -1,11 +1,14 @@
 // ================================
-// ZADY WEB STUDIO - SCRIPT
+// ZADY WEB STUDIO - WHATSAPP FORM
 // ================================
 
-
-// MOBILE MENU
 const menuButton = document.getElementById("menuButton");
 const navLinks = document.getElementById("navLinks");
+
+
+// ================================
+// MOBILE MENU
+// ================================
 
 if (menuButton && navLinks) {
 
@@ -15,16 +18,13 @@ if (menuButton && navLinks) {
 
         if (navLinks.classList.contains("open")) {
             menuButton.textContent = "✕";
-            menuButton.setAttribute("aria-label", "Close menu");
         } else {
             menuButton.textContent = "☰";
-            menuButton.setAttribute("aria-label", "Open menu");
         }
 
     });
 
 
-    // Close menu when a link is clicked
     const links = navLinks.querySelectorAll("a");
 
     links.forEach(function (link) {
@@ -35,11 +35,6 @@ if (menuButton && navLinks) {
 
             menuButton.textContent = "☰";
 
-            menuButton.setAttribute(
-                "aria-label",
-                "Open menu"
-            );
-
         });
 
     });
@@ -47,15 +42,23 @@ if (menuButton && navLinks) {
 }
 
 
-// CONTACT FORM
-const contactForm = document.getElementById("contactForm");
-const formMessage = document.getElementById("formMessage");
+// ================================
+// WHATSAPP CONTACT FORM
+// ================================
+
+const contactForm =
+    document.getElementById("contactForm");
+
+const formMessage =
+    document.getElementById("formMessage");
+
 
 if (contactForm) {
 
     contactForm.addEventListener("submit", function (event) {
 
         event.preventDefault();
+
 
         const name =
             document.getElementById("name").value.trim();
@@ -73,6 +76,8 @@ if (contactForm) {
             document.getElementById("message").value.trim();
 
 
+        // Check required fields
+
         if (
             name === "" ||
             phone === "" ||
@@ -85,11 +90,67 @@ if (contactForm) {
                 "Please fill in all the fields.";
 
             return;
+
         }
 
 
+        // Your WhatsApp number
+
+        const whatsappNumber =
+            "916385558452";
+
+
+        // Create WhatsApp message
+
+        const whatsappMessage =
+`🔔 NEW WEBSITE ENQUIRY
+
+👤 Name:
+${name}
+
+📱 Phone:
+${phone}
+
+📧 Email:
+${email}
+
+💻 Service:
+${service}
+
+📝 Project Details:
+${message}
+
+━━━━━━━━━━━━━━
+ZADY Web Studio`;
+
+
+        // Encode message
+
+        const encodedMessage =
+            encodeURIComponent(whatsappMessage);
+
+
+        // WhatsApp URL
+
+        const whatsappURL =
+            `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+
+        // Open WhatsApp
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+
+        // Show message
+
         formMessage.textContent =
-            "Thank you! Your request has been received.";
+            "Opening WhatsApp...";
+
+
+        // Reset form
 
         contactForm.reset();
 
@@ -98,12 +159,18 @@ if (contactForm) {
 }
 
 
+// ================================
 // NAVBAR SHADOW
-const header = document.querySelector(".header");
+// ================================
+
+const header =
+    document.querySelector(".header");
+
 
 window.addEventListener("scroll", function () {
 
     if (!header) return;
+
 
     if (window.scrollY > 30) {
 
@@ -119,23 +186,34 @@ window.addEventListener("scroll", function () {
 });
 
 
-// RESET MOBILE MENU ON DESKTOP
+// ================================
+// RESET MOBILE MENU
+// ================================
+
 window.addEventListener("resize", function () {
 
     if (window.innerWidth > 850) {
 
-        navLinks.classList.remove("open");
+        if (navLinks) {
+            navLinks.classList.remove("open");
+        }
 
-        menuButton.textContent = "☰";
+        if (menuButton) {
+            menuButton.textContent = "☰";
+        }
 
     }
 
 });
 
 
-// CURRENT YEAR
+// ================================
+// FOOTER YEAR
+// ================================
+
 const footerText =
     document.querySelector(".footer-bottom p");
+
 
 if (footerText) {
 
@@ -145,5 +223,10 @@ if (footerText) {
 }
 
 
-// WEBSITE LOADED
-console.log("ZADY Web Studio loaded successfully.");
+// ================================
+// CONSOLE
+// ================================
+
+console.log(
+    "ZADY Web Studio loaded successfully."
+);
