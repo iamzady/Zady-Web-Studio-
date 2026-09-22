@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -14,9 +15,10 @@
         content="ZADY Web Studio - Modern websites for modern businesses."
     >
 
-    <title>ZADY Web Studio | Websites That Work</title>
+    <title>ZADY Web Studio</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 
@@ -24,21 +26,36 @@
 
 
     <!-- =========================
-         NAVIGATION
+         HEADER
     ========================== -->
 
     <header class="header">
 
-        <nav class="navbar">
+        <div class="container navbar">
 
             <a href="#home" class="logo">
                 ZADY<span>.</span>
             </a>
 
 
-            <div class="nav-links" id="navLinks">
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+
+            <nav
+                class="nav-links"
+                id="navLinks"
+            >
 
                 <a href="#home">Home</a>
+
+                <a href="#about">About</a>
 
                 <a href="#services">Services</a>
 
@@ -48,29 +65,9 @@
 
                 <a href="#contact">Contact</a>
 
-            </div>
+            </nav>
 
-
-            <a
-                href="#contact"
-                class="nav-button">
-
-                Start a Project
-
-            </a>
-
-
-            <button
-                class="menu-button"
-                id="menuButton"
-                type="button"
-                aria-label="Open menu">
-
-                ☰
-
-            </button>
-
-        </nav>
+        </div>
 
     </header>
 
@@ -82,201 +79,115 @@
 
     <main>
 
-
         <section
             id="home"
-            class="hero">
+            class="hero"
+        >
 
+            <div class="container hero-content">
 
-            <div class="hero-content">
-
-
-                <div class="hero-badge">
-
-                    <span></span>
-
-                    Available for new projects
-
-                </div>
+                <p class="section-label">
+                    ZADY WEB STUDIO
+                </p>
 
 
                 <h1>
 
-                    WE BUILD
-                    <span>WEBSITES</span>
-                    THAT WORK.
+                    We build websites
+                    <br>
+
+                    <span>
+                        that make an impact.
+                    </span>
 
                 </h1>
 
 
                 <p class="hero-text">
 
-                    Modern, responsive and professional
-                    websites designed to help your business
-                    grow online.
+                    Modern, fast and responsive
+                    websites designed to help
+                    businesses grow online.
 
                 </p>
 
 
                 <div class="hero-buttons">
 
-
                     <a
                         href="#contact"
-                        class="primary-button">
-
-                        Start Your Project
+                        class="primary-button"
+                    >
+                        Start a Project
                         <span>→</span>
-
                     </a>
 
 
                     <a
                         href="#work"
-                        class="secondary-button">
-
+                        class="secondary-button"
+                    >
                         View Our Work
-
                     </a>
 
-
                 </div>
-
-
-                <div class="hero-stats">
-
-
-                    <div>
-
-                        <strong>10+</strong>
-
-                        <span>
-                            Projects
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <strong>100%</strong>
-
-                        <span>
-                            Responsive
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <strong>24/7</strong>
-
-                        <span>
-                            Support
-                        </span>
-
-                    </div>
-
-
-                </div>
-
 
             </div>
-
-
-            <div class="hero-visual">
-
-
-                <div class="browser-window">
-
-
-                    <div class="browser-top">
-
-                        <div class="browser-dots">
-
-                            <span></span>
-                            <span></span>
-                            <span></span>
-
-                        </div>
-
-
-                        <div class="browser-address">
-
-                            zadywebstudio.com
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="browser-content">
-
-
-                        <div class="mock-logo">
-                            ZADY
-                        </div>
-
-
-                        <div class="mock-line large"></div>
-
-                        <div class="mock-line"></div>
-
-                        <div class="mock-line short"></div>
-
-
-                        <div class="mock-cards">
-
-
-                            <div></div>
-
-                            <div></div>
-
-                            <div></div>
-
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
 
         </section>
 
 
 
         <!-- =========================
-             TRUST BAR
+             ABOUT
         ========================== -->
 
-        <section class="trust-section">
+        <section
+            id="about"
+            class="about-section"
+        >
+
+            <div class="container about-grid">
+
+                <div>
+
+                    <p class="section-label">
+                        ABOUT US
+                    </p>
+
+                    <h2>
+                        Your idea.
+                        <span>Our craft.</span>
+                    </h2>
+
+                </div>
 
 
-            <p>
-                BUILT FOR MODERN BUSINESSES
-            </p>
+                <div class="about-text">
+
+                    <p>
+
+                        ZADY Web Studio creates clean,
+                        modern and responsive websites
+                        for businesses, creators and
+                        personal brands.
+
+                    </p>
 
 
-            <div class="trust-items">
+                    <p>
 
-                <span>STARTUPS</span>
+                        From simple landing pages to
+                        complete online stores, we focus
+                        on creating websites that look
+                        professional and work smoothly
+                        on every device.
 
-                <span>RETAIL</span>
+                    </p>
 
-                <span>CREATORS</span>
-
-                <span>RESTAURANTS</span>
-
-                <span>LOCAL BUSINESSES</span>
+                </div>
 
             </div>
-
 
         </section>
 
@@ -288,531 +199,273 @@
 
         <section
             id="services"
-            class="section services-section">
+            class="services-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        WHAT WE DO
+                    </p>
+
+                    <h2>
+                        Our <span>Services</span>
+                    </h2>
+
+                    <p>
+                        Everything you need to build
+                        a strong online presence.
+                    </p>
+
+                </div>
 
 
-            <div class="section-heading">
+                <div class="services-grid">
 
 
-                <p class="section-label">
-                    WHAT WE DO
-                </p>
+                    <article class="service-card">
+
+                        <div class="service-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Business Websites
+                        </h3>
+
+                        <p>
+                            Professional websites
+                            designed to represent
+                            your business online.
+                        </p>
+
+                    </article>
 
 
-                <h2>
 
-                    Everything you need
-                    <span>to go online.</span>
+                    <article class="service-card">
 
-                </h2>
+                        <div class="service-number">
+                            02
+                        </div>
+
+                        <h3>
+                            E-Commerce Websites
+                        </h3>
+
+                        <p>
+                            Online stores where you
+                            can showcase and sell your
+                            products.
+                        </p>
+
+                    </article>
 
 
-                <p>
 
-                    From simple business websites to
-                    complete e-commerce experiences,
-                    we build websites around your goals.
+                    <article class="service-card">
 
-                </p>
+                        <div class="service-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Landing Pages
+                        </h3>
+
+                        <p>
+                            High-impact landing pages
+                            built for products,
+                            campaigns and promotions.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <div class="service-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Portfolio Websites
+                        </h3>
+
+                        <p>
+                            Personal websites for
+                            creators, designers,
+                            photographers and artists.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <div class="service-number">
+                            05
+                        </div>
+
+                        <h3>
+                            UI / UX Design
+                        </h3>
+
+                        <p>
+                            Clean and user-friendly
+                            interfaces focused on
+                            better experiences.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <div class="service-number">
+                            06
+                        </div>
+
+                        <h3>
+                            Website Maintenance
+                        </h3>
+
+                        <p>
+                            Updates, fixes and ongoing
+                            improvements to keep your
+                            website running smoothly.
+                        </p>
+
+                    </article>
+
+                </div>
 
             </div>
-
-
-
-            <div class="services-grid">
-
-
-                <article class="service-card">
-
-
-                    <div class="service-number">
-                        01
-                    </div>
-
-
-                    <div class="service-icon">
-                        ◇
-                    </div>
-
-
-                    <h3>
-                        Business Websites
-                    </h3>
-
-
-                    <p>
-
-                        Professional websites that
-                        introduce your business and
-                        turn visitors into customers.
-
-                    </p>
-
-
-                    <ul>
-
-                        <li>✓ Custom design</li>
-
-                        <li>✓ Mobile responsive</li>
-
-                        <li>✓ Contact forms</li>
-
-                        <li>✓ SEO-ready structure</li>
-
-                    </ul>
-
-
-                </article>
-
-
-
-                <article class="service-card featured">
-
-
-                    <div class="service-number">
-                        02
-                    </div>
-
-
-                    <div class="service-icon">
-                        ◈
-                    </div>
-
-
-                    <h3>
-                        E-Commerce
-                    </h3>
-
-
-                    <p>
-
-                        Online stores with products,
-                        shopping carts and checkout
-                        experiences.
-
-                    </p>
-
-
-                    <ul>
-
-                        <li>✓ Product catalogue</li>
-
-                        <li>✓ Shopping cart</li>
-
-                        <li>✓ Checkout</li>
-
-                        <li>✓ Payment integration</li>
-
-                    </ul>
-
-
-                </article>
-
-
-
-                <article class="service-card">
-
-
-                    <div class="service-number">
-                        03
-                    </div>
-
-
-                    <div class="service-icon">
-                        ◎
-                    </div>
-
-
-                    <h3>
-                        Landing Pages
-                    </h3>
-
-
-                    <p>
-
-                        High-converting landing pages
-                        for products, campaigns and
-                        personal brands.
-
-                    </p>
-
-
-                    <ul>
-
-                        <li>✓ Conversion focused</li>
-
-                        <li>✓ Fast loading</li>
-
-                        <li>✓ Responsive design</li>
-
-                        <li>✓ Clear call-to-action</li>
-
-                    </ul>
-
-
-                </article>
-
-
-
-                <article class="service-card">
-
-
-                    <div class="service-number">
-                        04
-                    </div>
-
-
-                    <div class="service-icon">
-                        +
-                    </div>
-
-
-                    <h3>
-                        Website Maintenance
-                    </h3>
-
-
-                    <p>
-
-                        Keep your website updated,
-                        secure and ready for your
-                        customers.
-
-                    </p>
-
-
-                    <ul>
-
-                        <li>✓ Content updates</li>
-
-                        <li>✓ Product updates</li>
-
-                        <li>✓ Bug fixes</li>
-
-                        <li>✓ Technical support</li>
-
-                    </ul>
-
-
-                </article>
-
-
-            </div>
-
 
         </section>
 
 
 
         <!-- =========================
-             PROCESS
-        ========================== -->
-
-        <section class="process-section">
-
-
-            <div class="section-heading">
-
-
-                <p class="section-label">
-                    OUR PROCESS
-                </p>
-
-
-                <h2>
-
-                    Simple process.
-                    <span>Great results.</span>
-
-                </h2>
-
-            </div>
-
-
-
-            <div class="process-grid">
-
-
-                <div class="process-step">
-
-                    <span>01</span>
-
-                    <h3>
-                        Discover
-                    </h3>
-
-                    <p>
-
-                        We understand your business,
-                        audience and goals.
-
-                    </p>
-
-                </div>
-
-
-                <div class="process-line"></div>
-
-
-                <div class="process-step">
-
-                    <span>02</span>
-
-                    <h3>
-                        Design
-                    </h3>
-
-                    <p>
-
-                        We create a clean design
-                        around your brand.
-
-                    </p>
-
-                </div>
-
-
-                <div class="process-line"></div>
-
-
-                <div class="process-step">
-
-                    <span>03</span>
-
-                    <h3>
-                        Build
-                    </h3>
-
-                    <p>
-
-                        We turn the design into
-                        a responsive website.
-
-                    </p>
-
-                </div>
-
-
-                <div class="process-line"></div>
-
-
-                <div class="process-step">
-
-                    <span>04</span>
-
-                    <h3>
-                        Launch
-                    </h3>
-
-                    <p>
-
-                        Your website goes live
-                        and ready for customers.
-
-                    </p>
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =========================
-             PORTFOLIO
+             OUR WORK
         ========================== -->
 
         <section
             id="work"
-            class="section work-section">
+            class="work-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        OUR WORK
+                    </p>
+
+                    <h2>
+                        Selected <span>Projects</span>
+                    </h2>
+
+                    <p>
+                        A few examples of what we can
+                        create for your brand.
+                    </p>
+
+                </div>
 
 
-            <div class="section-heading">
+                <div class="portfolio-grid">
 
 
-                <p class="section-label">
-                    SELECTED WORK
-                </p>
+                    <article class="portfolio-card">
 
+                        <div class="portfolio-image">
 
-                <h2>
-
-                    Work we're
-                    <span>proud of.</span>
-
-                </h2>
-
-
-                <p>
-
-                    A few examples of the digital
-                    experiences we create.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="portfolio-grid">
-
-
-                <article class="portfolio-card">
-
-
-                    <div class="portfolio-preview preview-one">
-
-
-                        <div class="preview-browser">
-
-                            <div class="preview-header">
-                                ZADY
-                            </div>
-
-
-                            <div class="preview-title">
-                                Modern Store
-                            </div>
-
-
-                            <div class="preview-boxes">
-
-                                <span></span>
-                                <span></span>
-                                <span></span>
-
-                            </div>
+                            <span>
+                                E-COMMERCE
+                            </span>
 
                         </div>
 
-
-                    </div>
-
-
-                    <div class="portfolio-info">
-
-                        <div>
-
-                            <p>
-                                E-COMMERCE
-                            </p>
+                        <div class="portfolio-info">
 
                             <h3>
-                                ZADY Store
+                                Fashion Store
                             </h3>
 
-                        </div>
-
-
-                        <span class="portfolio-arrow">
-                            ↗
-                        </span>
-
-                    </div>
-
-
-                </article>
-
-
-
-                <article class="portfolio-card">
-
-
-                    <div class="portfolio-preview preview-two">
-
-
-                        <div class="preview-business">
-
-                            <div class="preview-circle"></div>
-
-                            <div class="preview-lines"></div>
-
-                            <div class="preview-button"></div>
-
-                        </div>
-
-
-                    </div>
-
-
-                    <div class="portfolio-info">
-
-                        <div>
-
                             <p>
-                                BUSINESS
+                                Online clothing store
+                                concept.
                             </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="portfolio-card">
+
+                        <div class="portfolio-image">
+
+                            <span>
+                                BUSINESS
+                            </span>
+
+                        </div>
+
+                        <div class="portfolio-info">
 
                             <h3>
                                 Business Website
                             </h3>
 
-                        </div>
-
-
-                        <span class="portfolio-arrow">
-                            ↗
-                        </span>
-
-                    </div>
-
-
-                </article>
-
-
-
-                <article class="portfolio-card">
-
-
-                    <div class="portfolio-preview preview-three">
-
-
-                        <div class="preview-creator">
-
-                            <div class="creator-title">
-                                CREATE.
-                            </div>
-
-                            <div class="creator-bar"></div>
-
-                            <div class="creator-bar small"></div>
-
-                        </div>
-
-
-                    </div>
-
-
-                    <div class="portfolio-info">
-
-                        <div>
-
                             <p>
-                                CREATOR
+                                Modern business website
+                                concept.
                             </p>
 
-                            <h3>
-                                Personal Brand
-                            </h3>
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="portfolio-card">
+
+                        <div class="portfolio-image">
+
+                            <span>
+                                CREATOR
+                            </span>
 
                         </div>
 
+                        <div class="portfolio-info">
 
-                        <span class="portfolio-arrow">
-                            ↗
-                        </span>
+                            <h3>
+                                Creator Portfolio
+                            </h3>
 
-                    </div>
+                            <p>
+                                Personal portfolio
+                                website concept.
+                            </p>
+
+                        </div>
+
+                    </article>
 
 
-                </article>
-
+                </div>
 
             </div>
-
 
         </section>
 
@@ -824,396 +477,261 @@
 
         <section
             id="pricing"
-            class="pricing-section">
+            class="pricing-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        PRICING
+                    </p>
+
+                    <h2>
+                        Simple <span>Plans</span>
+                    </h2>
+
+                    <p>
+                        Choose a starting point and
+                        customise it for your needs.
+                    </p>
+
+                </div>
 
 
-            <div class="section-heading">
+                <div class="pricing-grid">
 
 
-                <p class="section-label">
-                    SIMPLE PRICING
-                </p>
+                    <article class="price-card">
+
+                        <p class="price-label">
+                            STARTER
+                        </p>
+
+                        <h3>
+                            ₹4,999
+                        </h3>
+
+                        <p>
+                            Perfect for a simple
+                            professional website.
+                        </p>
 
 
-                <h2>
+                        <ul>
 
-                    Choose what
-                    <span>fits you.</span>
+                            <li>✓ Up to 3 pages</li>
 
-                </h2>
+                            <li>✓ Mobile responsive</li>
+
+                            <li>✓ Modern design</li>
+
+                            <li>✓ WhatsApp integration</li>
+
+                            <li>✓ Basic SEO</li>
+
+                        </ul>
 
 
-                <p>
+                        <a
+                            href="#contact"
+                            class="price-button"
+                        >
+                            Get Started
+                        </a>
 
-                    Every project can be customized
-                    based on your requirements.
+                    </article>
 
-                </p>
+
+
+                    <article class="price-card featured">
+
+                        <p class="price-label">
+                            BUSINESS
+                        </p>
+
+                        <h3>
+                            ₹9,999
+                        </h3>
+
+                        <p>
+                            For businesses that need
+                            a stronger online presence.
+                        </p>
+
+
+                        <ul>
+
+                            <li>✓ Up to 7 pages</li>
+
+                            <li>✓ Custom design</li>
+
+                            <li>✓ Mobile responsive</li>
+
+                            <li>✓ Contact integration</li>
+
+                            <li>✓ Basic SEO</li>
+
+                        </ul>
+
+
+                        <a
+                            href="#contact"
+                            class="price-button"
+                        >
+                            Get Started
+                        </a>
+
+                    </article>
+
+
+
+                    <article class="price-card">
+
+                        <p class="price-label">
+                            E-COMMERCE
+                        </p>
+
+                        <h3>
+                            ₹19,999+
+                        </h3>
+
+                        <p>
+                            Complete online store
+                            for selling products.
+                        </p>
+
+
+                        <ul>
+
+                            <li>✓ Product pages</li>
+
+                            <li>✓ Shopping cart</li>
+
+                            <li>✓ Responsive design</li>
+
+                            <li>✓ WhatsApp integration</li>
+
+                            <li>✓ Payment integration</li>
+
+                        </ul>
+
+
+                        <a
+                            href="#contact"
+                            class="price-button"
+                        >
+                            Discuss Project
+                        </a>
+
+                    </article>
+
+
+                </div>
 
             </div>
-
-
-
-            <div class="pricing-grid">
-
-
-                <article class="price-card">
-
-
-                    <p class="price-label">
-                        STARTER
-                    </p>
-
-
-                    <h3>
-                        ₹4,999
-                    </h3>
-
-
-                    <p class="price-description">
-
-                        Perfect for individuals
-                        and small businesses.
-
-                    </p>
-
-
-                    <a
-                        href="#contact"
-                        class="price-button">
-
-                        Get Started
-
-                    </a>
-
-
-                    <ul>
-
-                        <li>✓ One-page website</li>
-
-                        <li>✓ Responsive design</li>
-
-                        <li>✓ Contact section</li>
-
-                        <li>✓ Basic SEO structure</li>
-
-                        <li>✓ Deployment</li>
-
-                    </ul>
-
-
-                </article>
-
-
-
-                <article class="price-card popular">
-
-
-                    <div class="popular-badge">
-                        MOST POPULAR
-                    </div>
-
-
-                    <p class="price-label">
-                        BUSINESS
-                    </p>
-
-
-                    <h3>
-                        ₹9,999
-                    </h3>
-
-
-                    <p class="price-description">
-
-                        For businesses that need
-                        a complete online presence.
-
-                    </p>
-
-
-                    <a
-                        href="#contact"
-                        class="price-button">
-
-                        Get Started
-
-                    </a>
-
-
-                    <ul>
-
-                        <li>✓ Up to 5 pages</li>
-
-                        <li>✓ Custom design</li>
-
-                        <li>✓ Contact forms</li>
-
-                        <li>✓ Mobile optimization</li>
-
-                        <li>✓ Basic SEO</li>
-
-                        <li>✓ Deployment</li>
-
-                    </ul>
-
-
-                </article>
-
-
-
-                <article class="price-card">
-
-
-                    <p class="price-label">
-                        E-COMMERCE
-                    </p>
-
-
-                    <h3>
-                        ₹15,000+
-                    </h3>
-
-
-                    <p class="price-description">
-
-                        Complete online store
-                        for selling products.
-
-                    </p>
-
-
-                    <a
-                        href="#contact"
-                        class="price-button">
-
-                        Discuss Project
-
-                    </a>
-
-
-                    <ul>
-
-                        <li>✓ Product catalogue</li>
-
-                        <li>✓ Shopping cart</li>
-
-                        <li>✓ Checkout</li>
-
-                        <li>✓ Payment integration</li>
-
-                        <li>✓ Order system</li>
-
-                        <li>✓ Deployment</li>
-
-                    </ul>
-
-
-                </article>
-
-
-            </div>
-
-
-            <p class="pricing-note">
-
-                * Final pricing depends on project
-                requirements and features.
-
-            </p>
-
 
         </section>
 
 
 
         <!-- =========================
-             WHY US
+             PROCESS
         ========================== -->
 
-        <section class="section why-section">
+        <section
+            class="process-section"
+        >
 
+            <div class="container">
 
-            <div class="why-content">
-
-
-                <div class="why-text">
-
+                <div class="section-heading">
 
                     <p class="section-label">
-                        WHY ZADY
+                        HOW IT WORKS
                     </p>
-
 
                     <h2>
-
-                        Your business
-                        deserves a better
-                        <span>website.</span>
-
+                        Simple <span>Process</span>
                     </h2>
-
-
-                    <p>
-
-                        We focus on creating websites
-                        that look professional, work
-                        smoothly and make it easy for
-                        customers to connect with you.
-
-                    </p>
-
-
-                    <a
-                        href="#contact"
-                        class="primary-button">
-
-                        Let's Build Something
-
-                    </a>
-
 
                 </div>
 
 
+                <div class="process-grid">
 
-                <div class="why-list">
 
-
-                    <div class="why-item">
+                    <div class="process-step">
 
                         <span>01</span>
 
-                        <div>
+                        <h3>
+                            Discuss
+                        </h3>
 
-                            <h3>
-                                Modern Design
-                            </h3>
-
-                            <p>
-                                Clean interfaces built
-                                around your brand.
-                            </p>
-
-                        </div>
+                        <p>
+                            We understand your idea,
+                            business and requirements.
+                        </p>
 
                     </div>
 
 
-                    <div class="why-item">
+
+                    <div class="process-step">
 
                         <span>02</span>
 
-                        <div>
+                        <h3>
+                            Design
+                        </h3>
 
-                            <h3>
-                                Mobile First
-                            </h3>
-
-                            <p>
-                                Your website looks great
-                                on phones, tablets and PCs.
-                            </p>
-
-                        </div>
+                        <p>
+                            We create a modern design
+                            based on your brand.
+                        </p>
 
                     </div>
 
 
-                    <div class="why-item">
+
+                    <div class="process-step">
 
                         <span>03</span>
 
-                        <div>
+                        <h3>
+                            Build
+                        </h3>
 
-                            <h3>
-                                Built For Growth
-                            </h3>
-
-                            <p>
-                                Websites designed to grow
-                                with your business.
-                            </p>
-
-                        </div>
+                        <p>
+                            We develop the website
+                            and make it responsive.
+                        </p>
 
                     </div>
 
 
-                    <div class="why-item">
+
+                    <div class="process-step">
 
                         <span>04</span>
 
-                        <div>
+                        <h3>
+                            Launch
+                        </h3>
 
-                            <h3>
-                                Personal Support
-                            </h3>
-
-                            <p>
-                                Direct communication from
-                                project start to launch.
-                            </p>
-
-                        </div>
+                        <p>
+                            Your website goes live
+                            and is ready for customers.
+                        </p>
 
                     </div>
 
 
                 </div>
 
-
             </div>
-
-
-        </section>
-
-
-
-        <!-- =========================
-             CTA
-        ========================== -->
-
-        <section class="cta-section">
-
-
-            <div class="cta-content">
-
-
-                <p class="section-label">
-                    HAVE A PROJECT?
-                </p>
-
-
-                <h2>
-
-                    Let's build your
-                    <span>online presence.</span>
-
-                </h2>
-
-
-                <p>
-
-                    Tell us what you need.
-                    We'll turn your idea into
-                    a professional website.
-
-                </p>
-
-
-                <a
-                    href="#contact"
-                    class="cta-button">
-
-                    Start a Conversation
-                    <span>→</span>
-
-                </a>
-
-
-            </div>
-
 
         </section>
 
@@ -1225,236 +743,305 @@
 
         <section
             id="contact"
-            class="section contact-section">
+            class="contact-section"
+        >
+
+            <div class="container">
 
 
-            <div class="section-heading">
+                <div class="contact-heading">
 
-
-                <p class="section-label">
-                    CONTACT US
-                </p>
-
-
-                <h2>
-
-                    Let's talk about
-                    <span>your project.</span>
-
-                </h2>
-
-
-                <p>
-
-                    Fill in the form and we'll
-                    get back to you.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="contact-wrapper">
-
-
-                <div class="contact-info">
-
-
-                    <h3>
-                        Start a conversation.
-                    </h3>
-
-
-                    <p>
-
-                        Have an idea for a website?
-                        Tell us about it and let's
-                        make it happen.
-
+                    <p class="section-label">
+                        LET'S WORK TOGETHER
                     </p>
 
+                    <h2>
+                        Have a project
+                        <span>in mind?</span>
+                    </h2>
 
-                    <div class="contact-detail">
-
-                        <span>EMAIL</span>
-
-                        <a href="mailto:hello@zadywebstudio.com">
-
-                            hello@zadywebstudio.com
-
-                        </a>
-
-                    </div>
-
-
-                    <div class="contact-detail">
-
-                        <span>WHATSAPP</span>
-
-                        <a href="https://wa.me/919999999999">
-
-                            +91 99999 99999
-
-                        </a>
-
-                    </div>
-
-
-                    <div class="contact-detail">
-
-                        <span>LOCATION</span>
-
-                        <p>
-                            Chennai, India
-                        </p>
-
-                    </div>
-
+                    <p>
+                        Tell us about your idea and
+                        let's create something great
+                        together.
+                    </p>
 
                 </div>
 
 
 
-                <form
-                    id="contactForm"
-                    class="contact-form">
+                <div class="contact-container">
 
 
-                    <div class="form-row">
+                    <!-- CONTACT DETAILS -->
+
+                    <div class="contact-details">
 
 
-                        <div class="form-group">
+                        <div class="contact-card">
 
-                            <label for="name">
-                                Your Name
-                            </label>
+                            <div class="contact-icon">
+                                ✉
+                            </div>
 
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                placeholder="Enter your name"
-                                required>
+                            <div>
 
-                        </div>
+                                <span>
+                                    EMAIL
+                                </span>
 
+                                <a
+                                    href="mailto:iamzady7@gmail.com"
+                                >
+                                    iamzady7@gmail.com
+                                </a>
 
-                        <div class="form-group">
-
-                            <label for="phone">
-                                Phone
-                            </label>
-
-                            <input
-                                type="tel"
-                                id="phone"
-                                name="phone"
-                                placeholder="Your phone number"
-                                required>
+                            </div>
 
                         </div>
 
 
+
+                        <div class="contact-card">
+
+                            <div class="contact-icon">
+                                ☎
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    PHONE
+                                </span>
+
+                                <a
+                                    href="tel:+916385558452"
+                                >
+                                    +91 63855 58452
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="contact-card">
+
+                            <div class="contact-icon">
+                                W
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    WHATSAPP
+                                </span>
+
+                                <a
+                                    href="https://wa.me/916385558452"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Chat on WhatsApp
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="contact-card">
+
+                            <div class="contact-icon">
+                                ◎
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    LOCATION
+                                </span>
+
+                                <p>
+                                    Chennai, India
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
                     </div>
 
 
-                    <div class="form-group">
 
-                        <label for="email">
-                            Email
-                        </label>
+                    <!-- CONTACT FORM -->
 
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="you@example.com"
-                            required>
-
-                    </div>
+                    <form
+                        id="contactForm"
+                        class="contact-form"
+                    >
 
 
-                    <div class="form-group">
-
-                        <label for="service">
-                            What do you need?
-                        </label>
+                        <div class="form-row">
 
 
-                        <select
-                            id="service"
-                            name="service"
-                            required>
+                            <div class="form-group">
 
-                            <option value="">
-                                Select a service
-                            </option>
+                                <label for="name">
+                                    Your Name
+                                </label>
 
-                            <option value="Business Website">
-                                Business Website
-                            </option>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter your name"
+                                    required
+                                >
 
-                            <option value="E-Commerce">
-                                E-Commerce Website
-                            </option>
-
-                            <option value="Landing Page">
-                                Landing Page
-                            </option>
-
-                            <option value="Maintenance">
-                                Website Maintenance
-                            </option>
-
-                            <option value="Other">
-                                Other
-                            </option>
-
-                        </select>
-
-                    </div>
+                            </div>
 
 
-                    <div class="form-group">
 
-                        <label for="message">
-                            Tell us about your project
-                        </label>
+                            <div class="form-group">
 
-                        <textarea
-                            id="message"
-                            name="message"
-                            placeholder="Tell us what you want to build..."
-                            required></textarea>
+                                <label for="phone">
+                                    Phone Number
+                                </label>
 
-                    </div>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="Enter your number"
+                                    required
+                                >
 
-
-                    <button
-                        type="submit"
-                        class="form-button">
-
-                        Send Project Request
-                        <span>→</span>
-
-                    </button>
+                            </div>
 
 
-                    <p
-                        id="formMessage"
-                        class="form-message">
-                    </p>
+                        </div>
 
 
-                </form>
 
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="service">
+                                What do you need?
+                            </label>
+
+                            <select
+                                id="service"
+                                name="service"
+                                required
+                            >
+
+                                <option value="">
+                                    Select a service
+                                </option>
+
+                                <option value="Business Website">
+                                    Business Website
+                                </option>
+
+                                <option value="E-Commerce Website">
+                                    E-Commerce Website
+                                </option>
+
+                                <option value="Landing Page">
+                                    Landing Page
+                                </option>
+
+                                <option value="Portfolio Website">
+                                    Portfolio Website
+                                </option>
+
+                                <option value="UI/UX Design">
+                                    UI/UX Design
+                                </option>
+
+                                <option value="Website Maintenance">
+                                    Website Maintenance
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Tell us about your project
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Tell us what you want to build..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <button
+                            type="submit"
+                            class="form-button"
+                        >
+
+                            Send Enquiry
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+
+
+                        <p
+                            id="formMessage"
+                            class="form-message"
+                            aria-live="polite"
+                        ></p>
+
+
+                    </form>
+
+
+                </div>
 
             </div>
 
-
         </section>
-
 
     </main>
 
@@ -1464,38 +1051,29 @@
          FOOTER
     ========================== -->
 
-    <footer>
+    <footer class="footer">
+
+        <div class="container footer-content">
 
 
-        <div class="footer-main">
+            <div>
 
-
-            <div class="footer-brand">
-
-
-                <a href="#home" class="logo">
+                <a
+                    href="#home"
+                    class="logo"
+                >
                     ZADY<span>.</span>
                 </a>
 
-
                 <p>
-
-                    Websites that work.
-                    Brands that grow.
-
+                    Websites built with purpose.
                 </p>
-
 
             </div>
 
 
-            <div class="footer-column">
 
-
-                <h4>
-                    NAVIGATION
-                </h4>
-
+            <div class="footer-links">
 
                 <a href="#home">
                     Home
@@ -1509,66 +1087,9 @@
                     Work
                 </a>
 
-                <a href="#pricing">
-                    Pricing
-                </a>
-
                 <a href="#contact">
                     Contact
                 </a>
-
-
-            </div>
-
-
-            <div class="footer-column">
-
-
-                <h4>
-                    SERVICES
-                </h4>
-
-
-                <a href="#services">
-                    Business Websites
-                </a>
-
-                <a href="#services">
-                    E-Commerce
-                </a>
-
-                <a href="#services">
-                    Landing Pages
-                </a>
-
-                <a href="#services">
-                    Maintenance
-                </a>
-
-
-            </div>
-
-
-            <div class="footer-column">
-
-
-                <h4>
-                    CONNECT
-                </h4>
-
-
-                <a href="mailto:hello@zadywebstudio.com">
-                    Email
-                </a>
-
-                <a href="https://wa.me/919999999999">
-                    WhatsApp
-                </a>
-
-                <a href="#">
-                    Instagram
-                </a>
-
 
             </div>
 
@@ -1576,40 +1097,48 @@
         </div>
 
 
-        <div class="footer-bottom">
 
+        <div class="container footer-bottom">
 
             <p>
                 © 2026 ZADY Web Studio.
                 All rights reserved.
             </p>
 
-
             <p>
                 Built with passion.
             </p>
 
-
         </div>
 
-
     </footer>
+
+
+
+    <!-- =========================
+         FLOATING WHATSAPP
+    ========================== -->
+
+    <a
+        href="https://wa.me/916385558452?text=Hi%20ZADY%20Web%20Studio%2C%20I%20want%20to%20build%20a%20website."
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with ZADY Web Studio on WhatsApp"
+    >
+
+        <span>W</span>
+
+        WhatsApp
+
+    </a>
 
 
 
     <!-- JAVASCRIPT -->
 
     <script src="script.js"></script>
- <a
-    href="https://wa.me/916385558452?text=Hi%20ZADY%20Web%20Studio%2C%20I%20want%20to%20build%20a%20website."
-    class="whatsapp-float"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Chat with ZADY Web Studio on WhatsApp"
->
-    <span>☘</span>
-    WhatsApp
-</a> 
+
 
 </body>
 
