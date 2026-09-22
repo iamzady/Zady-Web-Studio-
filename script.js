@@ -1,50 +1,87 @@
-// ================================
-// ZADY WEB STUDIO - WHATSAPP FORM
-// ================================
-
-const menuButton = document.getElementById("menuButton");
-const navLinks = document.getElementById("navLinks");
+/* ========================================
+   ZADY WEB STUDIO
+   COMPLETE JAVASCRIPT
+======================================== */
 
 
-// ================================
-// MOBILE MENU
-// ================================
+/* ========================================
+   MOBILE MENU
+======================================== */
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const navLinks =
+    document.getElementById("navLinks");
+
 
 if (menuButton && navLinks) {
 
-    menuButton.addEventListener("click", function () {
+    menuButton.addEventListener(
+        "click",
+        function () {
 
-        navLinks.classList.toggle("open");
+            navLinks.classList.toggle("open");
 
-        if (navLinks.classList.contains("open")) {
-            menuButton.textContent = "✕";
-        } else {
-            menuButton.textContent = "☰";
+
+            if (
+                navLinks.classList.contains("open")
+            ) {
+
+                menuButton.textContent = "✕";
+
+                menuButton.setAttribute(
+                    "aria-label",
+                    "Close menu"
+                );
+
+            } else {
+
+                menuButton.textContent = "☰";
+
+                menuButton.setAttribute(
+                    "aria-label",
+                    "Open menu"
+                );
+
+            }
+
         }
+    );
 
-    });
+
+    /* Close menu after clicking a link */
+
+    const navigationLinks =
+        navLinks.querySelectorAll("a");
 
 
-    const links = navLinks.querySelectorAll("a");
+    navigationLinks.forEach(function (link) {
 
-    links.forEach(function (link) {
+        link.addEventListener(
+            "click",
+            function () {
 
-        link.addEventListener("click", function () {
+                navLinks.classList.remove("open");
 
-            navLinks.classList.remove("open");
+                menuButton.textContent = "☰";
 
-            menuButton.textContent = "☰";
+                menuButton.setAttribute(
+                    "aria-label",
+                    "Open menu"
+                );
 
-        });
+            }
+        );
 
     });
 
 }
 
 
-// ================================
-// WHATSAPP CONTACT FORM
-// ================================
+/* ========================================
+   CONTACT FORM → WHATSAPP
+======================================== */
 
 const contactForm =
     document.getElementById("contactForm");
@@ -55,54 +92,81 @@ const formMessage =
 
 if (contactForm) {
 
-    contactForm.addEventListener("submit", function (event) {
+    contactForm.addEventListener(
+        "submit",
+        function (event) {
 
-        event.preventDefault();
-
-
-        const name =
-            document.getElementById("name").value.trim();
-
-        const phone =
-            document.getElementById("phone").value.trim();
-
-        const email =
-            document.getElementById("email").value.trim();
-
-        const service =
-            document.getElementById("service").value;
-
-        const message =
-            document.getElementById("message").value.trim();
+            event.preventDefault();
 
 
-        // Check required fields
+            /* Get form values */
 
-        if (
-            name === "" ||
-            phone === "" ||
-            email === "" ||
-            service === "" ||
-            message === ""
-        ) {
-
-            formMessage.textContent =
-                "Please fill in all the fields.";
-
-            return;
-
-        }
+            const name =
+                document
+                .getElementById("name")
+                .value
+                .trim();
 
 
-        // Your WhatsApp number
+            const phone =
+                document
+                .getElementById("phone")
+                .value
+                .trim();
 
-        const whatsappNumber =
-            "916385558452";
+
+            const email =
+                document
+                .getElementById("email")
+                .value
+                .trim();
 
 
-        // Create WhatsApp message
+            const service =
+                document
+                .getElementById("service")
+                .value;
 
-        const whatsappMessage =
+
+            const message =
+                document
+                .getElementById("message")
+                .value
+                .trim();
+
+
+            /* Validate */
+
+            if (
+                name === "" ||
+                phone === "" ||
+                email === "" ||
+                service === "" ||
+                message === ""
+            ) {
+
+                formMessage.textContent =
+                    "Please fill in all the fields.";
+
+                return;
+
+            }
+
+
+            /* =================================
+               YOUR WHATSAPP NUMBER
+            ================================= */
+
+            const whatsappNumber =
+                "916385558452";
+
+
+            /* =================================
+               CREATE WHATSAPP MESSAGE
+            ================================= */
+
+            const whatsappMessage =
+
 `🔔 NEW WEBSITE ENQUIRY
 
 👤 Name:
@@ -120,112 +184,200 @@ ${service}
 📝 Project Details:
 ${message}
 
-━━━━━━━━━━━━━━
-ZADY Web Studio`;
+━━━━━━━━━━━━━━━━━━
+
+ZADY WEB STUDIO
+
+📧 iamzady7@gmail.com
+📱 +91 63855 58452`;
 
 
-        // Encode message
+            /* Encode message */
 
-        const encodedMessage =
-            encodeURIComponent(whatsappMessage);
-
-
-        // WhatsApp URL
-
-        const whatsappURL =
-            `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            const encodedMessage =
+                encodeURIComponent(
+                    whatsappMessage
+                );
 
 
-        // Open WhatsApp
+            /* Create WhatsApp URL */
 
-        window.open(
-            whatsappURL,
-            "_blank"
-        );
-
-
-        // Show message
-
-        formMessage.textContent =
-            "Opening WhatsApp...";
+            const whatsappURL =
+                "https://wa.me/" +
+                whatsappNumber +
+                "?text=" +
+                encodedMessage;
 
 
-        // Reset form
+            /* Show status */
 
-        contactForm.reset();
+            formMessage.textContent =
+                "Opening WhatsApp...";
 
-    });
+
+            /* Open WhatsApp */
+
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
+
+
+            /* Clear form */
+
+            contactForm.reset();
+
+        }
+    );
 
 }
 
 
-// ================================
-// NAVBAR SHADOW
-// ================================
+/* ========================================
+   HEADER SCROLL EFFECT
+======================================== */
 
 const header =
     document.querySelector(".header");
 
 
-window.addEventListener("scroll", function () {
+window.addEventListener(
+    "scroll",
+    function () {
 
-    if (!header) return;
-
-
-    if (window.scrollY > 30) {
-
-        header.style.boxShadow =
-            "0 10px 35px rgba(0,0,0,0.25)";
-
-    } else {
-
-        header.style.boxShadow = "none";
-
-    }
-
-});
-
-
-// ================================
-// RESET MOBILE MENU
-// ================================
-
-window.addEventListener("resize", function () {
-
-    if (window.innerWidth > 850) {
-
-        if (navLinks) {
-            navLinks.classList.remove("open");
+        if (!header) {
+            return;
         }
 
-        if (menuButton) {
-            menuButton.textContent = "☰";
+
+        if (window.scrollY > 30) {
+
+            header.style.boxShadow =
+                "0 10px 35px rgba(0,0,0,0.25)";
+
+        } else {
+
+            header.style.boxShadow =
+                "none";
+
         }
 
     }
-
-});
-
-
-// ================================
-// FOOTER YEAR
-// ================================
-
-const footerText =
-    document.querySelector(".footer-bottom p");
+);
 
 
-if (footerText) {
+/* ========================================
+   CLOSE MOBILE MENU ON RESIZE
+======================================== */
 
-    footerText.textContent =
+window.addEventListener(
+    "resize",
+    function () {
+
+        if (window.innerWidth > 750) {
+
+            if (navLinks) {
+
+                navLinks.classList.remove(
+                    "open"
+                );
+
+            }
+
+
+            if (menuButton) {
+
+                menuButton.textContent =
+                    "☰";
+
+                menuButton.setAttribute(
+                    "aria-label",
+                    "Open menu"
+                );
+
+            }
+
+        }
+
+    }
+);
+
+
+/* ========================================
+   FOOTER YEAR
+======================================== */
+
+const footerBottom =
+    document.querySelector(
+        ".footer-bottom p"
+    );
+
+
+if (footerBottom) {
+
+    footerBottom.textContent =
         `© ${new Date().getFullYear()} ZADY Web Studio. All rights reserved.`;
 
 }
 
 
-// ================================
-// CONSOLE
-// ================================
+/* ========================================
+   SMOOTH NAVIGATION
+======================================== */
+
+const allAnchorLinks =
+    document.querySelectorAll(
+        'a[href^="#"]'
+    );
+
+
+allAnchorLinks.forEach(function (link) {
+
+    link.addEventListener(
+        "click",
+        function (event) {
+
+            const targetId =
+                this.getAttribute("href");
+
+
+            if (
+                !targetId ||
+                targetId === "#"
+            ) {
+
+                return;
+
+            }
+
+
+            const target =
+                document.querySelector(
+                    targetId
+                );
+
+
+            if (target) {
+
+                event.preventDefault();
+
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+
+        }
+    );
+
+});
+
+
+/* ========================================
+   PAGE LOADED
+======================================== */
 
 console.log(
     "ZADY Web Studio loaded successfully."
